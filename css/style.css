@@ -1,0 +1,202 @@
+html {
+    font-size: 62.5%;/*reset para rems 62.5% == 10px de 16 px*/
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*//*aqui van todas las configuraciones que se van a aplicar a todos elementos del mismo tipo*/
+/*este selector permite que todas las imagenes sean responsivas al darle como maximo ancho el que tiene */
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;/*toma el ancho disponible siempre y cuando no se pase de 1200 px*/
+    margin: 0 auto;/*le un margen automatico a la izquierda y derecha del objeto que tiene una ancho maximo de 1200px */
+}
+/*le da estilo de la misma forma a todos los elementos de este tipo en este caso son los titulos*/
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/*Botones*/
+
+.d-block {
+    display: block!important;
+}
+
+.boton {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-verde {
+    background-color: #71B100;
+}
+
+.boton-amarillo {
+    background-color: #e08709;
+}
+
+/*Utilidades*/
+.seccion {/*esta la utilizaremos para darle un margen de arriba y abajo al section*/
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*header*/
+.site-header.inicio {
+    background: url(../img/header.jpg);/*agreagmos la imagen de fondo del header*/
+    background-position: center center;/*colocamos el enfoque en el centro de la imagen*/
+    height: 100vh;/*le decimos que tome el tamaño de la pantalla en la que se esta viendo la pagina*/
+    min-height: 60rem;/*es el tamaño minimo en caso de que el usuario tenga una pantalla mas pequeña lo minimo seran 600px*/
+
+}
+
+.contenido-header {
+    height: 100%;/*con esta propiedad hacemos que tome la altura de su padre para poder usar las propiedades del flexbox pero en direccion de columna*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;/*cuando la direccion del flexbox es de tipo columna para alinear elementos en forma vertical usamos el justify content, que normalmente se lo usa para alinear horizontalmente*/
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;/*con este tamaño hacemos que el texto se mire en dos lineas*/
+    line-height: 1.5;/*le da un interlineado al texto(espacio entre el texto)*/
+}
+
+.barra {
+    display: flex;/*le damos la propiedad de flexbox a esta barra */
+    padding-top: 3rem;/*le damos un margen hacia dentro de la parte superior*/
+    align-items: center;/*con esta propiedad ordenamos el contenido de manera vertical*/
+    justify-content: space-between/*colocamos el mismo espacio entre los objetos del la barra lo que hace que uno valla al comienzo y el otro al final de la barra*/
+}
+
+/*navegacion*/
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+.navegacion a:hover {/*este pseudo(es el mas comun) selector lo usamos para darle color de letra a los enlaces cuando se coloque el mause sobre el enlace o ancla*/
+    color: #71B100;
+}
+.navegacion a:last-of-type {/*con este pseudoselector escojemos el ultimo elemento del tipo enlace o ancla y le quitamos el margen a la derecha para que no tenga este diseño un margin que no sirve y que quede el diseño mas limpio*/
+    margin-right: 0px;
+}
+
+/*iconos nosotros*/
+
+.iconos-nosotros {
+    display: flex;/*le damos tipi de linea flex al padre de los iconos*/
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc(33.3% - 1rem);/*le dammos a los objetos un tamalo relativo a supadre*/
+    text-align: center;/*centramos los textos y imagenes de cada targeta*/
+}
+
+.icono h3 {
+    text-transform: uppercase;/*permite transformar el texto a mayusculas*/
+}
+
+/*Anuncios*/
+
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.anuncio {
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #b5b5b5;
+    background: #f5f5f5;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, .contenido-anuncio p {
+    margin: 0px;
+}
+
+.precio {
+    color: #71B100;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li {
+    /* flex: 1; */
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Imagen de contacto*/
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 1;
+    color: white;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
